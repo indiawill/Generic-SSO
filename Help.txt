@@ -1,6 +1,6 @@
 **************************************************************
 * Author: Kunal S. Bhardwaj (indiawill)                      *
-* Role:   Freelance Cyber Security Consultant & C# Developer *
+* Role:   Cyber Security Consultant & C# Developer           *
 **************************************************************
 
 GenericSSO :: Enterprise Single Sign-On Module

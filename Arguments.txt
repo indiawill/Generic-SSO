@@ -1,0 +1,22 @@
+**************************************************************
+* Author: Kunal S. Bhardwaj (indiawill)                      *
+* Role:   Cyber Security Consultant & C# Developer           *
+**************************************************************
+
+GenericSSO :: Enterprise Single Sign-On Module
+
+* Parameters will be always starting from Application Name configured in data.ini file as [SECTION]
+* Commands passed through data.ini file is case-sensitive, FORMAT will always be in CAPS i.e. APP/WEB
+
+For using parameter calls inside ini file use below commands in arguments section for APP option: 
+%ip = Second Argument in the parameter call after [SECTION] 
+%hostname = Third Argument in the parameter call after [SECTION] 
+%username = Fourth Argument in the parameter call after [SECTION] 
+%password = Fifth Argument in the parameter call after [SECTION] 
+%port = Sixth Argument in the parameter call after [SECTION] 
+
+For using parameter calls for WEB option in URL section:
+%ip = Second Argument in the parameter call after [SECTION] 
+%hostname = Third Argument in the parameter call after [SECTION] 
+
+NOTE:: While using inFile parameter calls, it is mandatory to use arguments according to the above commands and with respective placeholder in parameter 

@@ -9,18 +9,19 @@ GenericSSO :: Enterprise Single Sign-On Module
 *Supported Commands :: 
 1. keys
 2. keyswait
-3. link
-4. partial-link
-5. button (id/name/xpath/classname/tagname)
-6. field1/2/3/4/5/... (id/name/xpath/classname/tagname/send/sendwait)
-7. msgbox
-8. sleep
-9. blockinput
-10. bringtofront (no parameter/s)
-11. checkfname
-12. checkfcname
-13. checkfaid
-14. while (checkfname/checkfcname/checkfaid)
+3. keyswait
+4. link
+5. partial-link
+6. button (id/name/xpath/classname/tagname)
+7. field1/2/3/4/5/... (id/name/xpath/classname/tagname/send/sendwait)
+8. msgbox
+9. sleep
+10. blockinput
+11. bringtofront (no parameter/s)
+12. checkfname
+13. checkfcname
+14. checkfaid
+15. while (checkfname/checkfcname/checkfaid)
 
 *Implementation examples for Supported Commands :: 
 1. keys
@@ -33,50 +34,54 @@ eg: keys:{TAB};keys:{ENTER}
 https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.sendkeys.send?view=netcore-3.1
 eg: keyswait:{TAB};keyswait:{ENTER}
 
-3. link
+3. staticpassword
+==> This command will support encrypted password string from a filename
+eg: staticpassword:filename:id/name/xpath/tagname/classname/send/sendwait
+
+4. link
 ==> This command will help bypass links like "Continue to this Website" when you invoke any unencrypted webportal
 eg: link:Continue to this Website
 
-4. partial-link
+5. partial-link
 ==> This command will help bypass links same as above, but in this function you can just provide part of entire string
 eg: partial-link:Continue
 
-5. button
+6. button
 ==> This command will help automate any button or focusing on any element. Extended parameters are id/name/xpath/classname/tagname.
 eg: button:id:userName;button:name:Password
 
-6. field
+7. field
 ==> This command will help to automate parameters passed to the program after very first parameter of Application Name. It'll start reading from second parameter passed as field1 and respectively field2,field3,.... and so on. Any "field1 / 2 / 3 / ..." selected in data.ini file with extended command as "send" will jus send that particular placeholder directly to the assigned attribute. 
 eg: field1:xpath://*[@id="email"];field2:send
 
-7. msgbox
+8. msgbox
 ==> This command will show a message box with the data written in the data.ini file
 eg: msgbox:This is a test message;msgbox:Kindly wait till the process completes
 
-8. sleep
+9. sleep
 ==> This command will help to sleep the program for a particular time frame and then executes the next command 
 eg: sleep:1000
 
-9. blockinput
+10. blockinput
 ==> This command will help to block user input till the process starts for automation. You may enable at the start of the SSO and disable at the end. 
 eg: blockinput:true/false
 
-10. bringtofront
+11. bringtofront
 ==> This command doesn't require any extended parameter as it'll directly read from data.ini file "PROCESSNAME" parameter and will bring that mentioned process in front for automation to work like sendkeys using "keys"
 eg: bringtofront
 
-11. checkfname
+12. checkfname
 ==> This command will help to check whether focused element name is the same as mentioned in data.ini file or not. Mostly to use when sending password on screen
 eg: checkfname:username;checkfname:password
 
-12. checkfcname
+13. checkfcname
 ==> This command will help to check whether focused element classname is the same as mentioned in data.ini file or not. Mostly to use when sending password on screen
 eg: checkfcname:username;checkfcname:password
 
-13. checkfaid
+14. checkfaid
 ==> This command will help to check whether focused element automation ID is the same as mentioned in data.ini file or not
 eg: checkfaid:10001;checkfaid:10002
 
-14. while
+15. while
 ==> This command have supported extended command i.e. checkfname/checkfcname/checkfaid. This will help to wait for the mentioned attribute to come in focus or in selected mode to do further automation
 eg: while:checkfname:username;while:checkfcname:Password

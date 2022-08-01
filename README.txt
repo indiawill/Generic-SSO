@@ -7,8 +7,8 @@ GenericSSO :: Enterprise Single Sign-On Module
 *Commands passed through data.ini file is case-sensitive
 
 *Supported Commands :: 
-1. send
-2. sendwait
+1. keys
+2. keyswait
 3. staticpassword (id/name/xpath/classname/tagname/send/sendwait)
 4. link
 5. partial-link

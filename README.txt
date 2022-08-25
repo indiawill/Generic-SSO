@@ -1,12 +1,12 @@
-Author: Kunal S. Bhardwaj 
-
+AUTHOR: Kunal S. Bhardwaj 
 GenericSSO :: Enterprise Single Sign-On Module
 
-*IMPORTANT: Minimum .NET Framework 4.6.1 is required
+*IMPORTANT: Minimum .NET Framework 4.8 is required
 *Parameters will be always starting from Application Name configured in data.ini file as [SECTION]
 *Commands passed through data.ini file is case-sensitive
+*SPECIAL CHARACTERS SUPPORTED: !@#$*__=[]\;':|,./?
 
-*Supported Commands :: 
+*SUPPORTED COMMANDS :: 
 1. keys
 2. keyswait
 3. staticpassword (id/name/xpath/classname/tagname/send/sendwait)

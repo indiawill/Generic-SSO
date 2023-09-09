@@ -1,8 +1,7 @@
 GenericSSO :: Enterprise Single Sign-On Module
 
 *IMPORTANT: Minimum .NET Framework 4.8 is required
-*Parameters will be always starting from Application Name configured in data.ini file as [SECTION]
-*Commands passed through data.ini file is case-sensitive
+*Parameters will be always starting from Application Name configured in data file as [SECTION]
 *SPECIAL CHARACTERS NOT SUPPORTED: BACKSLASH (\) & DOUBLE QUOTES(")
 
 *SUPPORTED COMMANDS :: 
@@ -20,8 +19,9 @@ GenericSSO :: Enterprise Single Sign-On Module
 12. checkfname
 13. checkfcname
 14. checkfaid
-15. while (checkfname/checkfcname/checkfaid)
-16. invokefile
+15. checkffid
+16. while (checkfname/checkfcname/checkfaid)
+17. invokefile
 
 *Implementation examples for Supported Commands :: 
 1. keys
@@ -83,7 +83,7 @@ eg: checkfcname:username;checkfcname:password
 eg: checkfaid:10001;checkfaid:10002
 
 15. checkffid
-==> This command will help to check whether focused element automation ID is the same as mentioned in data.ini file or not
+==> This command will help to check whether focused element framework ID is the same as mentioned in data.ini file or not
 eg: checkffid:10001;checkffid:10002
 
 16. while

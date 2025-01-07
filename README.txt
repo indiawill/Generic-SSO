@@ -1,7 +1,9 @@
+AUTHOR: Kunal S. Bhardwaj 
 GenericSSO :: Enterprise Single Sign-On Module
 
-*IMPORTANT: Minimum .NET Framework 4.7.2 is required
-*Parameters will be always starting from Application Name configured in data file as [SECTION]
+*IMPORTANT: Minimum .NET Framework 4.8 is required
+*Parameters will be always starting from Application Name configured in data.ini file as [SECTION]
+*Commands passed through data.ini file is case-sensitive
 *SPECIAL CHARACTERS NOT SUPPORTED: BACKSLASH (\) & DOUBLE QUOTES(")
 
 *SUPPORTED COMMANDS :: 
@@ -19,9 +21,7 @@ GenericSSO :: Enterprise Single Sign-On Module
 12. checkfname
 13. checkfcname
 14. checkfaid
-15. checkffid
-16. while (checkfname/checkfcname/checkfaid)
-17. invokefile
+15. while (checkfname/checkfcname/checkfaid)
 
 *Implementation examples for Supported Commands :: 
 1. keys
@@ -82,14 +82,6 @@ eg: checkfcname:username;checkfcname:password
 ==> This command will help to check whether focused element automation ID is the same as mentioned in data.ini file or not
 eg: checkfaid:10001;checkfaid:10002
 
-15. checkffid
-==> This command will help to check whether focused element framework ID is the same as mentioned in data.ini file or not
-eg: checkffid:10001;checkffid:10002
-
-16. while
-==> This command have support for extended command i.e. checkfname/checkfcname/checkfaid/checkffid. This will help to wait for the mentioned attribute to come in focus or in selected mode to do further automation
+15. while
+==> This command have supported extended command i.e. checkfname/checkfcname/checkfaid. This will help to wait for the mentioned attribute to come in focus or in selected mode to do further automation
 eg: while:checkfname:username;while:checkfcname:Password
-
-17. invokefile
-==> This command can be used to invoke any file in between or after automation with the confirmation dialog to the user.
-eg: invokefile:OKCancel:Do you want the some file to be invoked?:filepath:filearguments;invokefile:YesNo:Some Message:filepath:filearguments
